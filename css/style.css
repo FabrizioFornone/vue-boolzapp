@@ -2,6 +2,7 @@
 
 body {
   background-color: gainsboro;
+  /* font-family: Helvetica, Sans-Serif; */
 }
 
 .img-avatar {
@@ -22,7 +23,11 @@ input {
 }
 
 .text-secondary {
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.bold-text {
+  font-weight: 500;
 }
 /* ----------- */
 
@@ -105,7 +110,6 @@ header {
   height: calc(100% - 60px);
 }
 
-
 .chat-box-below i {
   color: #808080;
 }
@@ -113,4 +117,17 @@ header {
 .chat-space {
   background: url(../img/mine.jpg) repeat;
   height: calc(100% - 60px);
+}
+
+.user-message,
+.interlocutor-message {
+  border-radius: 10px;
+}
+
+.user-message {
+  background-color: #dcf8c6;
+}
+
+.interlocutor-message {
+  background-color: snow;
 }
