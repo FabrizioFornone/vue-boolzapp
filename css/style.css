@@ -1,8 +1,43 @@
-* {
+body {
   background-color: slategrey;
-  color: seashell;
+}
+
+header {
+  height: 100px;
+}
+
+#app {
+    height: 100vh;
+}
+
+.container-big {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+}
+
+.container-sidebar {
+    width: 500px;
+    background-color: sienna;
+}
+
+
+.container-chat {
+    width: 800px;
 }
 
 .img-avatar {
-    width: 5%;
+  width: 15%;
+  border-radius: 50%;
+}
+
+i {
+    font-size: 20px;
+}
+
+.bell-icon {
+    background-color: snow;
+    border-radius: 50%;
 }
