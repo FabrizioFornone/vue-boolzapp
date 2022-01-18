@@ -131,6 +131,6 @@ header {
 
 .chat-space {
   background: url(../img/mine.jpg) repeat;
-  background-size: cover;
+  background-size: contain;
   height: calc(100% - 60px);
 }
