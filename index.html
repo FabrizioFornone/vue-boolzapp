@@ -25,14 +25,14 @@
     <!-- App VueJS -->
     <!-- #app 100vh -->
     <div id="app">
-      <header class="bg-success"></header>
+      <header></header>
       <!-- container big absolute -->
       <div class="container-big d-flex bg-light">
         <!-- sidebar -->
         <div class="container-sidebar">
           <!-- user panel -->
           <div
-            class="d-flex justify-content-between align-items-center py-2 bg-secondary"
+            class="d-flex justify-content-between align-items-center py-2 panel-bar"
           >
             <div class="d-flex align-items-center">
               <img src="./img/avatar_1.jpg" class="img-avatar mx-2" alt="" />
@@ -55,16 +55,24 @@
             </div>
           </div>
           <!-- search bar -->
-          <div class="py-2 px-1">
-            <input placeholder="Cerca o inizia una nuova chat" type="text" name="" id="" />
-          </div>
-          <div v-for="contact in contacts" class="d-flex">
-            <img
-              :src="['img/' + contact.avatar]"
-              class="img-avatar p-2"
-              alt=""
+          <div class="py-2 px-1 search-bar">
+            <input
+              placeholder="Cerca o inizia una nuova chat"
+              type="text"
+              name=""
+              id=""
             />
-            <div class="p-2 fs-5">{{contact.name}}</div>
+          </div>
+          <!-- users bar -->
+          <div class="users-bar">
+            <div v-for="contact in contacts" class="d-flex">
+              <img
+                :src="['img/' + contact.avatar]"
+                class="img-avatar mx-3 py-2"
+                alt=""
+              />
+              <div class="p-2 fs-5">{{contact.name}}</div>
+            </div>
           </div>
         </div>
         <!-- main -->

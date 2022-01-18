@@ -1,14 +1,40 @@
+/* Utility */
+
 body {
-  background-color: slategrey;
+  background-color: gainsboro;
 }
 
+.img-avatar {
+  width: 12%;
+  border-radius: 50%;
+}
+
+i {
+  font-size: 20px;
+  color: #a9a9a9;
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  line-height: 2;
+}
+
+.text-secondary {
+  font-size: 14px;
+}
+/* ----------- */
+
 header {
-  height: 100px;
+  height: 130px;
+  background-color: lightseagreen;
 }
 
 #app {
   height: 100vh;
 }
+
+/* Structure containers */
 
 .container-big {
   position: absolute;
@@ -21,30 +47,23 @@ header {
 
 .container-sidebar {
   width: 35%;
-  background-color: sienna;
+  border-right: 1px solid #ccc;
 }
 
 .container-chat {
   width: 65%;
 }
 
-.img-avatar {
-  width: 15%;
-  border-radius: 50%;
-}
+/* Sidebar */
 
-i {
-  font-size: 20px;
-}
-
-input {
-    width: 100%;
-    border-radius: 5px;
-    line-height: 2
+.panel-bar {
+  background-color: #e8e8e8;
+  height: 60px;
 }
 
 .notification-bar {
   background-color: #00bfff;
+  height: 70px;
 }
 
 .bell-icon {
@@ -52,3 +71,15 @@ input {
   border-radius: 50%;
   color: #00bfff;
 }
+
+.search-bar {
+  height: 55px;
+}
+
+.users-bar {
+  margin-right: 10px;
+  background-color: wheat;
+  border-right: 1px solid #ccc;
+  height: calc(100% - 185px);
+}
+
