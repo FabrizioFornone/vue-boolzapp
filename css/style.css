@@ -121,10 +121,16 @@ header {
 }
 
 .img-avatar-chat {
-    width: 8%;
-    border-radius: 50%;
+  width: 8%;
+  border-radius: 50%;
 }
 
 .chat-box-below i {
   color: #808080;
+}
+
+.chat-space {
+  background: url(../img/mine.jpg) repeat;
+  background-size: cover;
+  height: calc(100% - 60px);
 }
