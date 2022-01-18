@@ -27,7 +27,7 @@
     <div id="app">
       <header></header>
       <!-- container big absolute -->
-      <div class="container-big d-flex bg-light">
+      <div class="container-big d-flex">
         <!-- sidebar -->
         <div class="container-sidebar">
           <!-- user panel -->
@@ -55,13 +55,16 @@
             </div>
           </div>
           <!-- search bar -->
-          <div class="py-2 px-1 search-bar">
-            <input
-              placeholder="Cerca o inizia una nuova chat"
-              type="text"
-              name=""
-              id=""
-            />
+          <div class="search-bar p-2">
+            <div class="internal-search px-2">
+              <i class="fas fa-search lens px-2"></i>
+              <input
+                placeholder="Cerca o inizia una nuova chat"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
           </div>
           <!-- users bar -->
           <div class="users-bar">
@@ -76,7 +79,9 @@
           </div>
         </div>
         <!-- main -->
-        <main class="container-chat"></main>
+        <main class="container-chat">
+            <div class="panel-bar"></div>
+        </main>
       </div>
     </div>
     <script src="./js/script.js"></script>

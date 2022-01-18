@@ -12,13 +12,36 @@ body {
 i {
   font-size: 20px;
   color: #a9a9a9;
+  cursor: pointer;
 }
 
 input {
-  width: 100%;
-  border-radius: 5px;
   line-height: 2;
+  border: none;
+  width: 89%;
 }
+
+/* non funziona, todo */
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+
+/* ---------- */
 
 .text-secondary {
   font-size: 14px;
@@ -43,6 +66,7 @@ header {
   transform: translate(-50%, -50%);
   height: 95%;
   width: 90%;
+  background: #fff;
 }
 
 .container-sidebar {
@@ -76,10 +100,18 @@ header {
   height: 55px;
 }
 
+.lens {
+    font-size: 17px;
+}
+
+.internal-search {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .users-bar {
   margin-right: 10px;
   background-color: wheat;
   border-right: 1px solid #ccc;
   height: calc(100% - 185px);
 }
-
