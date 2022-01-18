@@ -58,7 +58,8 @@
           <div class="search-bar p-2">
             <div class="internal-search d-flex align-items-center px-2">
               <i class="fas fa-search px-2" id="lens-sidebar"></i>
-              <input class="flex-grow-1"
+              <input
+                class="flex-grow-1"
                 placeholder="Cerca o inizia una nuova chat"
                 type="text"
                 name=""
@@ -85,8 +86,15 @@
               class="d-flex justify-content-between align-items-center py-2 panel-bar"
             >
               <div class="d-flex align-items-center">
-                <img src="./img/avatar_1.jpg" class="img-avatar mx-2" alt="" />
-                <div class="px-3 fs-5">Nome Utente</div>
+                <img
+                  src="./img/avatar_2.jpg"
+                  class="img-avatar-chat mx-2"
+                  alt=""
+                />
+                <div class="px-3">
+                  <div class="fs-5">Nome Utente</div>
+                  <div class="text-secondary">Ultimo accesso oggi alle</div>
+                </div>
               </div>
               <div class="d-flex">
                 <i class="fas fa-search px-2"></i>
@@ -96,11 +104,17 @@
             </div>
             <div class="chat-space"></div>
           </div>
-          <div class="chat-box-below">
+          <div class="panel-bar chat-box-below">
             <div class="d-flex align-items-center h-100">
-              <i class="far fa-smile"></i>
-              <input class="flex-grow-1" type="text" name="" id="">
-              <i class="fas fa-microphone-alt"></i>
+              <i class="far fa-smile px-4"></i>
+              <input
+                placeholder="Scrivi un messaggio"
+                class="flex-grow-1 p-2 rounded"
+                type="text"
+                name=""
+                id=""
+              />
+              <i class="fas fa-microphone-alt px-4"></i>
             </div>
           </div>
         </main>

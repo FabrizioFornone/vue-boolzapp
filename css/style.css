@@ -16,7 +16,7 @@ i {
 }
 
 .search-bar input,
-.chat-box-below input {
+.panel-bar input {
   line-height: 2;
   border: none;
 }
@@ -120,7 +120,11 @@ header {
   height: calc(100% - 60px);
 }
 
-.chat-box-below {
-  height: 60px;
-  background-color: lightsalmon;
+.img-avatar-chat {
+    width: 8%;
+    border-radius: 50%;
+}
+
+.chat-box-below i {
+  color: #808080;
 }
