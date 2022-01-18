@@ -70,7 +70,7 @@ new Vue({
         ],
       },
       {
-        name: "Luisa",
+        name: "Luisa La Baffuta",
         avatar: "avatar_4.jpg",
         visible: true,
         messages: [

@@ -15,31 +15,29 @@ i {
   cursor: pointer;
 }
 
-input {
+.search-bar input,
+.chat-box-below input {
   line-height: 2;
   border: none;
-  width: 89%;
 }
 
 /* non funziona, todo */
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
 input:focus,
 button:focus,
 button:active,
 button:hover,
 label:focus,
 .btn:active,
-.btn.active
-{
-    outline:0px !important;
-    -webkit-appearance:none;
-    box-shadow: none !important;
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
-
 
 /* ---------- */
 
@@ -100,8 +98,8 @@ header {
   height: 55px;
 }
 
-.lens {
-    font-size: 17px;
+#lens-sidebar {
+  font-size: 17px;
 }
 
 .internal-search {
@@ -114,4 +112,15 @@ header {
   background-color: wheat;
   border-right: 1px solid #ccc;
   height: calc(100% - 185px);
+}
+
+/* main */
+
+.chat-box-above {
+  height: calc(100% - 60px);
+}
+
+.chat-box-below {
+  height: 60px;
+  background-color: lightsalmon;
 }
