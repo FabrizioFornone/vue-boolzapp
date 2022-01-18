@@ -24,8 +24,11 @@
   <body>
     <!-- App VueJS -->
     <div id="app">
-        <!-- div x v-for -->
-        <div></div>
+      <!-- div x v-for -->
+      <div v-for="contact in contacts" class="d-flex">
+          <img :src="['img/' + contact.avatar]" class="img-avatar p-2" alt="">
+        <div class="p-2">{{contact.name}}</div>
+      </div>
     </div>
     <script src="./js/script.js"></script>
   </body>
