@@ -7,25 +7,25 @@ header {
 }
 
 #app {
-    height: 100vh;
+  height: 100vh;
 }
 
 .container-big {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 95%;
+  width: 90%;
 }
 
 .container-sidebar {
-    width: 500px;
-    background-color: sienna;
+  width: 35%;
+  background-color: sienna;
 }
 
-
 .container-chat {
-    width: 800px;
+  width: 65%;
 }
 
 .img-avatar {
@@ -34,10 +34,21 @@ header {
 }
 
 i {
-    font-size: 20px;
+  font-size: 20px;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    line-height: 2
+}
+
+.notification-bar {
+  background-color: #00bfff;
 }
 
 .bell-icon {
-    background-color: snow;
-    border-radius: 50%;
+  background-color: snow;
+  border-radius: 50%;
+  color: #00bfff;
 }
