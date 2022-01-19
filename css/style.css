@@ -33,9 +33,8 @@ input {
 
 /* Vuejs Classes*/
 
-.grey-user-bg {
-  background-color: #e8e8e8;
-}
+
+/* ------------ */
 
 header {
   height: 130px;
@@ -104,14 +103,18 @@ header {
   height: calc(100% - 185px);
 }
 
+.user-chat {
+  cursor: pointer;
+}
+
+.user-chat:hover {
+  background-color: #e8e8e8;
+}
+
 /* main */
 
 .chat-box-above {
   height: calc(100% - 60px);
-}
-
-.chat-box-below i {
-  color: #808080;
 }
 
 .chat-space {
@@ -130,4 +133,8 @@ header {
 
 .interlocutor-message {
   background-color: snow;
+}
+
+.chat-box-below i {
+  color: #808080;
 }
