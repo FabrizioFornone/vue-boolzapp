@@ -68,6 +68,8 @@
                 type="text"
                 name=""
                 id=""
+                v-model="searchBar"
+                @keyup.enter="test"
               />
             </div>
           </div>
@@ -116,13 +118,16 @@
             <div class="chat-space p-5">
               <!-- Messages -->
               <div
-                v-for="(message, i) in contacts[currentIndex].messages"
+                v-for="message in contacts[currentIndex].messages"
                 class="clear-fix"
               >
-                <div class="p-2 my-2" :class="contacts[currentIndex].messages[i].status === 'received' ? 'interlocutor-message' : 'user-message'">
-                  <div>{{contacts[currentIndex].messages[i].text}}</div>
+                <div
+                  class="p-2 my-2"
+                  :class="message.status === 'received' ? 'interlocutor-message' : 'user-message'"
+                >
+                  <div>{{message.text}}</div>
                   <div class="d-flex text-secondary justify-content-end">
-                    {{contacts[currentIndex].messages[i].date}}
+                    {{message.date}}
                   </div>
                 </div>
               </div>
@@ -137,7 +142,8 @@
                 class="flex-grow-1 p-2 rounded"
                 type="text"
                 name=""
-                v-model="temporaryMessage" @keyup.enter="newMessage(currentIndex)"
+                v-model="temporaryMessage"
+                @keyup.enter="newMessage(currentIndex)"
               />
               <i class="fas fa-microphone-alt px-4"></i>
             </div>

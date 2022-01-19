@@ -3,6 +3,7 @@ new Vue({
   data: {
     currentIndex: 0,
     temporaryMessage: "",
+    searchBar: "",
     contacts: [
       {
         name: "Michele",
@@ -111,6 +112,10 @@ new Vue({
           status: "received",
         });
       }, 1000);
+    },
+    test: function () {
+      console.log(this.searchBar);
+      this.searchBar = "";
     },
   },
 });
