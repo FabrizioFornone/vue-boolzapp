@@ -131,7 +131,7 @@ header {
 .interlocutor-message {
   border-radius: 10px;
   min-width: 100px;
-  max-width: 450px;
+  max-width: 600px;
   word-break: normal;
 }
 
