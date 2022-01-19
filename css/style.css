@@ -137,12 +137,12 @@ header {
 
 .user-message {
   background-color: #dcf8c6;
-  float: left;
+  float: right;
 }
 
 .interlocutor-message {
   background-color: snow;
-  float: right;
+  float: left;
 }
 
 .clear-fix::after {
