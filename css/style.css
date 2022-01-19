@@ -130,11 +130,17 @@ header {
 .user-message {
   background-color: #dcf8c6;
   float: left;
+  min-width: 300px;
+  max-width: 400px;
+  word-break: normal;
 }
 
 .interlocutor-message {
   background-color: snow;
   float: right;
+  min-width: 300px;
+  max-width: 400px;
+  word-break: normal;
 }
 
 .clear-fix::after {

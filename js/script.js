@@ -103,6 +103,7 @@ new Vue({
       });
       this.temporaryMessage = "";
       this.timeoutAnswer(index);
+      this.scrollFunction();
     },
     timeoutAnswer: function (index) {
       setTimeout(() => {
@@ -116,6 +117,12 @@ new Vue({
     test: function () {
       console.log(this.searchBar);
       this.searchBar = "";
+    },
+    scrollFunction: function () {
+      setTimeout(() => {
+        let containerToScroll = this.$el.querySelector(".chat-space");
+        containerToScroll.scrollTo(0, containerToScroll.scrollHeight);
+      }, 1500);
     },
   },
 });
