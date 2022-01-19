@@ -4,6 +4,7 @@ new Vue({
     currentIndex: 0,
     temporaryMessage: "",
     user: [],
+    answer: [],
     contacts: [
       {
         name: "Michele",
@@ -94,7 +95,6 @@ new Vue({
   methods: {
     indexAssignment: function (index) {
       this.currentIndex = index;
-      console.log(this.currentIndex);
     },
     addMessage: function () {
       this.user.push({
@@ -103,6 +103,14 @@ new Vue({
       });
       //svuoto dopo il push
       this.temporaryMessage = "";
+    },
+    answerMethod: function () {
+      setTimeout(() => {
+        this.answer.push({
+          text: "ok",
+          date: "test"
+        })
+      }, 1000);
     },
   },
 });
