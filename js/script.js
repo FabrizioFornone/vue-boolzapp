@@ -4,6 +4,13 @@ new Vue({
     currentIndex: 0,
     temporaryMessage: "",
     searchInput: "",
+    answersRandom: [
+      "We uagliò",
+      "Arigatou gozaimasu",
+      "Maronn benedett",
+      "Ca nisciun è fess",
+      "Vuoi farla ingelosirla",
+    ],
     contacts: [
       {
         name: "Michele",
@@ -163,6 +170,7 @@ new Vue({
     // funzione per l'assegnazione di un indice al click su un utente
     indexAssignment: function (x) {
       this.currentIndex = x;
+      console.log(this.currentIndex);
     },
     // funzione per aggiungere un nuovo messaggio custom
     newMessage: function (index) {
@@ -178,8 +186,9 @@ new Vue({
     // funzione per la risposta
     timeoutAnswer: function (i) {
       setTimeout(() => {
+        const randomNumber = this.randomAnswer(this.answersRandom);
         this.contacts[i].messages.push({
-          text: "ok",
+          text: this.answersRandom[randomNumber],
           date: "test",
           status: "received",
         });
@@ -197,6 +206,10 @@ new Vue({
         element.name.toLowerCase().startsWith(this.searchInput) ||
         this.searchInput === ""
       );
+    },
+    randomAnswer: function (array) {
+      const randomN = Math.floor(Math.random() * array.length);
+      return randomN;
     },
   },
 });
