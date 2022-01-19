@@ -2,6 +2,8 @@ new Vue({
   el: "#app",
   data: {
     currentIndex: 0,
+    temporaryMessage: "",
+    user: [],
     contacts: [
       {
         name: "Michele",
@@ -92,7 +94,15 @@ new Vue({
   methods: {
     indexAssignment: function (index) {
       this.currentIndex = index;
-      console.log(this.currentIndex)
+      console.log(this.currentIndex);
+    },
+    addMessage: function () {
+      this.user.push({
+        text: this.temporaryMessage,
+        date: "test",
+      });
+      //svuoto dopo il push
+      this.temporaryMessage = "";
     },
   },
 });
