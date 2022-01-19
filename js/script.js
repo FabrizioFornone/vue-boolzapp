@@ -92,9 +92,11 @@ new Vue({
     ],
   },
   methods: {
-    indexAssignment: function (index) {
-      this.currentIndex = index;
+    // funzione per l'assegnazione di un indice al click su un utente
+    indexAssignment: function (x) {
+      this.currentIndex = x;
     },
+    // funzione per aggiungere un nuovo messaggio custom
     newMessage: function (index) {
       this.contacts[index].messages.push({
         text: this.temporaryMessage,
@@ -105,19 +107,22 @@ new Vue({
       this.timeoutAnswer(index);
       this.scrollFunction();
     },
-    timeoutAnswer: function (index) {
+    // funzione per la risposta 
+    timeoutAnswer: function (i) {
       setTimeout(() => {
-        this.contacts[index].messages.push({
+        this.contacts[i].messages.push({
           text: "ok",
           date: "test",
           status: "received",
         });
       }, 1000);
     },
+    // funzione di test per la searchbar
     test: function () {
       console.log(this.searchBar);
       this.searchBar = "";
     },
+    // funzione per rimanere sempre ancorato in basso
     scrollFunction: function () {
       setTimeout(() => {
         let containerToScroll = this.$el.querySelector(".chat-space");
