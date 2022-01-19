@@ -69,7 +69,6 @@
                 name=""
                 id=""
                 v-model="searchInput"
-                
               />
             </div>
           </div>
@@ -80,6 +79,7 @@
               v-for="(contact, index) in contacts"
               class="d-flex user-chat"
               @click="indexAssignment(index)"
+              :class="{'active-user': currentIndex === index}"
             >
               <img
                 :src="['img/' + contact.avatar]"

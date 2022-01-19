@@ -111,6 +111,10 @@ header {
   background-color: #e8e8e8;
 }
 
+.active-user {
+  background-color: #e8e8e8;
+}
+
 /* main */
 
 .chat-box-above {
