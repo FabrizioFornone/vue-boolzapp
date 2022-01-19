@@ -89,6 +89,74 @@ new Vue({
           },
         ],
       },
+      {
+        name: "Peppe",
+        avatar: "avatar_5.jpg",
+        visible: true,
+        messages: [
+          {
+            date: "10/01/2020 15:30:55",
+            text: "Cosa ne pensi della baffuta?",
+            status: "sent",
+          },
+          {
+            date: "10/01/2020 15:50:00",
+            text: "Non ho capito se è un uomo o una donna",
+            status: "received",
+          },
+        ],
+      },
+      {
+        name: "Franca",
+        avatar: "avatar_6.jpg",
+        visible: true,
+        messages: [
+          {
+            date: "10/01/2020 15:30:55",
+            text: "Ieri  sono uscito con Luisa La Baffuta",
+            status: "sent",
+          },
+          {
+            date: "10/01/2020 15:50:00",
+            text: "Ha davvero i baff?",
+            status: "received",
+          },
+        ],
+      },
+      {
+        name: "Giovannino",
+        avatar: "avatar_7.jpg",
+        visible: true,
+        messages: [
+          {
+            date: "10/01/2020 15:30:55",
+            text: "Lo sapevi che Franca è uscita con Luisa La Baffuta?",
+            status: "sent",
+          },
+          {
+            date: "10/01/2020 15:50:00",
+            text: "I baffi sono irresistibili",
+            status: "received",
+          },
+        ],
+      },
+      {
+        name: "Johnny Lo Zio",
+        avatar: "avatar_8.jpg",
+        visible: true,
+        messages: [
+          {
+            date: "10/01/2020 15:30:55",
+            text: "Ciao Johnny come stai?",
+            status: "sent",
+          },
+          {
+            date: "10/01/2020 15:50:00",
+            text: "Male, Luisa La Baffuta mi ha lasciato",
+            status: "received",
+          },
+        ],
+      },
     ],
   },
   methods: {
@@ -107,7 +175,7 @@ new Vue({
       this.timeoutAnswer(index);
       this.scrollFunction();
     },
-    // funzione per la risposta 
+    // funzione per la risposta
     timeoutAnswer: function (i) {
       setTimeout(() => {
         this.contacts[i].messages.push({
