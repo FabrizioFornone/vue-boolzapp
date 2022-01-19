@@ -3,8 +3,6 @@ new Vue({
   data: {
     currentIndex: 0,
     temporaryMessage: "",
-    user: [],
-    answer: [],
     contacts: [
       {
         name: "Michele",
@@ -96,20 +94,22 @@ new Vue({
     indexAssignment: function (index) {
       this.currentIndex = index;
     },
-    addMessage: function () {
-      this.user.push({
+    newMessage: function (index) {
+      this.contacts[index].messages.push({
         text: this.temporaryMessage,
         date: "test",
+        status: "sent",
       });
-      //svuoto dopo il push
       this.temporaryMessage = "";
+      this.timeoutAnswer(index);
     },
-    answerMethod: function () {
+    timeoutAnswer: function (index) {
       setTimeout(() => {
-        this.answer.push({
+        this.contacts[index].messages.push({
           text: "ok",
-          date: "test"
-        })
+          date: "test",
+          status: "received",
+        });
       }, 1000);
     },
   },

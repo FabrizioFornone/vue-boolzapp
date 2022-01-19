@@ -119,6 +119,7 @@ header {
 .chat-space {
   background: url(../img/mine.jpg) repeat;
   height: calc(100% - 60px);
+  overflow: auto;
 }
 
 .user-message,
@@ -128,10 +129,18 @@ header {
 
 .user-message {
   background-color: #dcf8c6;
+  float: left;
 }
 
 .interlocutor-message {
   background-color: snow;
+  float: right;
+}
+
+.clear-fix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .chat-box-below i {

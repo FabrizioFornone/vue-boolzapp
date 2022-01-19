@@ -114,33 +114,15 @@
             </div>
             <!-- chat space -->
             <div class="chat-space p-5">
+              <!-- Messages -->
               <div
-                v-for="message in contacts[currentIndex].messages"
-                class="d-flex"
+                v-for="(message, i) in contacts[currentIndex].messages"
+                class="clear-fix"
               >
-                <div class="p-2 my-2 interlocutor-message">
-                  <div>{{message.text}}</div>
+                <div class="p-2 my-2" :class="contacts[currentIndex].messages[i].status === 'received' ? 'interlocutor-message' : 'user-message'">
+                  <div>{{contacts[currentIndex].messages[i].text}}</div>
                   <div class="d-flex text-secondary justify-content-end">
-                    {{message.date}}
-                  </div>
-                </div>
-              </div>
-              <!-- User messages template -->
-              <div class="d-flex justify-content-end">
-                <div>
-                  <div v-for="message in user" class="user-message p-2 my-2">
-                    <div>{{message.text}}</div>
-                    <div class="d-flex text-secondary justify-content-end">
-                      {{message.date}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex">
-                <div v-for="message in answer" class="p-2 my-2 interlocutor-message">
-                  <div>{{ message.text }}</div>
-                  <div class="d-flex text-secondary justify-content-end">
-                    <!--  -->
+                    {{contacts[currentIndex].messages[i].date}}
                   </div>
                 </div>
               </div>
@@ -155,10 +137,9 @@
                 class="flex-grow-1 p-2 rounded"
                 type="text"
                 name=""
-                v-model="temporaryMessage"
-                @keyup.enter="addMessage" 
+                v-model="temporaryMessage" @keyup.enter="newMessage(currentIndex)"
               />
-              <i class="fas fa-microphone-alt px-4" @click="answerMethod"></i>
+              <i class="fas fa-microphone-alt px-4"></i>
             </div>
           </div>
         </main>
