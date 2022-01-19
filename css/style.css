@@ -100,6 +100,7 @@ header {
   margin-right: 10px;
   border-right: 1px solid #ccc;
   height: calc(100% - 185px);
+  overflow-y: auto;
 }
 
 .user-chat {

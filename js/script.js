@@ -3,7 +3,7 @@ new Vue({
   data: {
     currentIndex: 0,
     temporaryMessage: "",
-    searchBar: "",
+    searchInput: "",
     contacts: [
       {
         name: "Michele",
@@ -184,11 +184,6 @@ new Vue({
           status: "received",
         });
       }, 1000);
-    },
-    // funzione di test per la searchbar
-    test: function () {
-      console.log(this.searchBar);
-      this.searchBar = "";
     },
     // funzione per rimanere sempre ancorato in basso
     scrollFunction: function () {
