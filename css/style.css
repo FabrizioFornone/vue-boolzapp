@@ -125,22 +125,19 @@ header {
 .user-message,
 .interlocutor-message {
   border-radius: 10px;
+  min-width: 100px;
+  max-width: 450px;
+  word-break: normal;
 }
 
 .user-message {
   background-color: #dcf8c6;
   float: left;
-  min-width: 300px;
-  max-width: 400px;
-  word-break: normal;
 }
 
 .interlocutor-message {
   background-color: snow;
   float: right;
-  min-width: 300px;
-  max-width: 400px;
-  word-break: normal;
 }
 
 .clear-fix::after {
