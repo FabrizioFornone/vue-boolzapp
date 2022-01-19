@@ -30,12 +30,12 @@
       <div class="container-big d-flex">
         <!-- sidebar -->
         <div class="container-sidebar">
-          <!-- user panel -->
+          <!-- user panel side -->
           <div
             class="d-flex justify-content-between align-items-center py-2 panel-bar"
           >
             <div class="d-flex align-items-center">
-              <img src="./img/avatar_io.jpg" class="img-avatar mx-2" alt="" />
+              <img src="./img/avatar_io.jpg" class="img-avatar user-avatar mx-2" alt="" />
               <div class="px-3 bold-text">Nome Utente</div>
             </div>
             <!-- icons -->
@@ -91,7 +91,7 @@
               class="d-flex justify-content-between align-items-center py-2 panel-bar"
             >
               <div class="d-flex align-items-center">
-                <img :src="['img/' + contacts[currentIndex].avatar]" class="img-avatar mx-2" alt="" />
+                <img :src="['img/' + contacts[currentIndex].avatar]" class="img-avatar user-avatar mx-2" alt="" />
                 <div class="px-3">
                   <div class="bold-text">{{contacts[currentIndex].name}}</div>
                   <div class="text-secondary">Ultimo accesso oggi alle</div>

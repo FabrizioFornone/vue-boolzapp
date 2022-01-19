@@ -31,11 +31,6 @@ input {
 }
 /* ----------- */
 
-/* Vuejs Classes*/
-
-
-/* ------------ */
-
 header {
   height: 130px;
   background-color: lightseagreen;
@@ -71,6 +66,10 @@ header {
 .panel-bar {
   background-color: #e8e8e8;
   height: 60px;
+}
+
+.user-avatar {
+  cursor: pointer;
 }
 
 .notification-bar {
