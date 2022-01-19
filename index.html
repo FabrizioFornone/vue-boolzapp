@@ -80,6 +80,7 @@
               class="d-flex user-chat"
               @click="indexAssignment(index)"
               :class="{'active-user': currentIndex === index}"
+              v-if="filterList(contact)"
             >
               <img
                 :src="['img/' + contact.avatar]"

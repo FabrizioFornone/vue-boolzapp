@@ -192,5 +192,11 @@ new Vue({
         containerToScroll.scrollTo(0, containerToScroll.scrollHeight);
       }, 1500);
     },
+    filterList: function (element) {
+      return (
+        element.name.toLowerCase().startsWith(this.searchInput) ||
+        this.searchInput === ""
+      );
+    },
   },
 });
