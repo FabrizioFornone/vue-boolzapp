@@ -6,8 +6,8 @@ new Vue({
     searchInput: "",
     answersRandom: [
       "We uagliò",
-      "Arigatou gozaimasu",
-      "Maronn benedett",
+      "Deux fritures",
+      "Sta senza pensier",
       "Ca nisciun è fess",
       "Vuoi farla ingelosirla",
     ],
