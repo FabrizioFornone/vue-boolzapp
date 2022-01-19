@@ -1,16 +1,6 @@
 new Vue({
   el: "#app",
   data: {
-    currentIndex: 0,
-    temporaryMessage: "",
-    searchInput: "",
-    answersRandom: [
-      "We uagliò",
-      "Deux fritures",
-      "Sta senza pensier",
-      "Ca nisciun è fess",
-      "Vuoi farla ingelosirla",
-    ],
     contacts: [
       {
         name: "Michele",
@@ -165,12 +155,21 @@ new Vue({
         ],
       },
     ],
+    currentIndex: 0,
+    temporaryMessage: "",
+    searchInput: "",
+    answersRandom: [
+      "We uagliò",
+      "Deux fritures",
+      "Sta senza pensier",
+      "Ca nisciun è fess",
+      "Vuoi farla ingelosirla",
+    ],
   },
   methods: {
     // funzione per l'assegnazione di un indice al click su un utente
     indexAssignment: function (x) {
       this.currentIndex = x;
-      console.log(this.currentIndex);
     },
     // funzione per aggiungere un nuovo messaggio custom
     newMessage: function (index) {
@@ -199,7 +198,7 @@ new Vue({
       setTimeout(() => {
         let containerToScroll = this.$el.querySelector(".chat-space");
         containerToScroll.scrollTo(0, containerToScroll.scrollHeight);
-      }, 1500);
+      }, 1000);
     },
     filterList: function (element) {
       return (
