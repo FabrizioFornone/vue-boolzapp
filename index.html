@@ -85,7 +85,7 @@
               v-if="filterList(contact)"
             >
               <img
-                :src="['img/' + contact.avatar]"
+                :src="['img/avatar' + contact.avatar]"
                 class="img-avatar mx-3 py-2"
                 alt=""
               />
@@ -102,7 +102,7 @@
             >
               <div class="d-flex align-items-center">
                 <img
-                  :src="['img/' + contacts[currentIndex].avatar]"
+                  :src="['img/avatar' + contacts[currentIndex].avatar]"
                   class="img-avatar user-avatar mx-2"
                   alt=""
                 />

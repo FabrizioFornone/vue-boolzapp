@@ -4,7 +4,7 @@ new Vue({
     contacts: [
       {
         name: "Michele",
-        avatar: "avatar_1.jpg",
+        avatar: "_1.jpg",
         visible: true,
         messages: [
           {
@@ -26,7 +26,7 @@ new Vue({
       },
       {
         name: "Fabio",
-        avatar: "avatar_2.jpg",
+        avatar: "_2.jpg",
         visible: true,
         messages: [
           {
@@ -49,7 +49,7 @@ new Vue({
 
       {
         name: "Samuele",
-        avatar: "avatar_3.jpg",
+        avatar: "_3.jpg",
         visible: true,
         messages: [
           {
@@ -71,7 +71,7 @@ new Vue({
       },
       {
         name: "Luisa la Baffuta",
-        avatar: "avatar_4.jpg",
+        avatar: "_4.jpg",
         visible: true,
         messages: [
           {
@@ -88,7 +88,7 @@ new Vue({
       },
       {
         name: "Peppe",
-        avatar: "avatar_5.jpg",
+        avatar: "_5.jpg",
         visible: true,
         messages: [
           {
@@ -105,7 +105,7 @@ new Vue({
       },
       {
         name: "Franca",
-        avatar: "avatar_6.jpg",
+        avatar: "_6.jpg",
         visible: true,
         messages: [
           {
@@ -122,7 +122,7 @@ new Vue({
       },
       {
         name: "Giovannino",
-        avatar: "avatar_7.jpg",
+        avatar: "_7.jpg",
         visible: true,
         messages: [
           {
@@ -139,7 +139,7 @@ new Vue({
       },
       {
         name: "Johnny Lo Zio",
-        avatar: "avatar_8.jpg",
+        avatar: "_8.jpg",
         visible: true,
         messages: [
           {
