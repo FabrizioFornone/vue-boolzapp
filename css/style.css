@@ -129,7 +129,7 @@ header {
 .sent,
 .received {
   border-radius: 10px;
-  min-width: 100px;
+  min-width: 150px;
   max-width: 600px;
   word-break: normal;
 }
