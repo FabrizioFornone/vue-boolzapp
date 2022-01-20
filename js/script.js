@@ -172,7 +172,7 @@ new Vue({
     // funzione per l'assegnazione di un indice al click su un utente
     indexAssignment: function (x) {
       this.currentIndex = x;
-      this.modalValue = !this.modalValue;
+      this.modalValue= false;
     },
     // funzione per aggiungere un nuovo messaggio custom
     newMessage: function (index) {
@@ -229,11 +229,15 @@ new Vue({
     },
     modalAppear: function (z) {
       this.messageIndex = z;
-      this.modalValue = !this.modalValue;
+      this.modalToggle();
     },
     removeItem: function (index, k) {
       this.contacts[index].messages.splice(k, 1);
+      this.modalToggle();
+    },
+    modalToggle: function () {
       this.modalValue = !this.modalValue;
+      console.log(this.modalValue);
     },
   },
 });
