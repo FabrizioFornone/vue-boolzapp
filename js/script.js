@@ -225,5 +225,8 @@ new Vue({
       this.messageIndex = z;
       this.modalValue = !this.modalValue;
     },
+    removeItem: function (index, k) {
+      this.contacts[index].messages.splice(k, 1);
+    },
   },
 });
