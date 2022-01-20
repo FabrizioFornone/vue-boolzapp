@@ -15,6 +15,10 @@ i {
   cursor: pointer;
 }
 
+i:hover {
+  color: lightseagreen;
+}
+
 input {
   line-height: 1.5;
   border: none;
@@ -156,6 +160,10 @@ header {
   color: #808080;
 }
 
+.chat-box-below i:hover {
+  color: lightseagreen;
+}
+
 .chevron {
   margin-left: 30px;
   color: #a9a9a9;
@@ -217,7 +225,7 @@ header {
   .notification-bar > div,
   .user-info > div,
   .user-icons > i,
-  .panel-bar  i,
+  .panel-bar i,
   .contact-info div:first-child {
     display: none;
   }
