@@ -65,6 +65,7 @@ header {
 .panel-bar {
   background-color: #e8e8e8;
   height: 60px;
+  justify-content: space-between;
 }
 
 .user-avatar {
@@ -104,6 +105,7 @@ header {
 
 .user-chat {
   cursor: pointer;
+  display: flex;
 }
 
 .user-chat:hover {
@@ -196,11 +198,16 @@ header {
 
 @media screen and (max-width: 575px) {
   .container-sidebar {
-    width: 43%;
+    width: 30%;
   }
 
   .container-chat {
-    width: 57%;
+    width: 70%;
+  }
+
+  .user-chat {
+    display: block;
+    text-align: center;
   }
 
   .internal-search input {
@@ -209,11 +216,17 @@ header {
 
   .notification-bar > div,
   .user-info > div,
+  .user-icons > i,
   .contact-info div:first-child {
     display: none;
   }
 
+  .panel-bar,
   .notification-bar {
     justify-content: center;
+  }
+
+  .chevron {
+    display: block;
   }
 }

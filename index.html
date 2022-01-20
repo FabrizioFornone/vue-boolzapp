@@ -34,7 +34,7 @@
         <div class="container-sidebar">
           <!-- user panel side -->
           <div
-            class="d-flex justify-content-between align-items-center py-2 panel-bar"
+            class="d-flex align-items-center py-2 panel-bar"
           >
             <div class="d-flex align-items-center user-info">
               <img
@@ -45,7 +45,7 @@
               <div class="px-3 bold-text">Nome Utente</div>
             </div>
             <!-- icons -->
-            <div class="d-flex">
+            <div class="d-flex user-icons">
               <i class="fas fa-circle-notch px-2"></i>
               <i class="fas fa-comment-alt px-2"></i>
               <i class="fas fa-ellipsis-v px-2 mx-2"></i>
@@ -80,7 +80,7 @@
             <!-- funzione per l'assegnazione di un indice al click su un utente -->
             <div
               v-for="(contact, index) in contacts"
-              class="d-flex user-chat"
+              class="user-chat"
               @click="indexAssignment(index)"
               :class="{'active-user': currentIndex === index}"
               v-if="filterList(contact)"
