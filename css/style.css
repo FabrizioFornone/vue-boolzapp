@@ -16,7 +16,7 @@ i {
 }
 
 input {
-  line-height: 2;
+  line-height: 1.5;
   border: none;
   outline: none;
 }
@@ -30,13 +30,13 @@ input {
 }
 /* ----------- */
 
+#app {
+  height: 100vh;
+}
+
 header {
   height: 130px;
   background-color: lightseagreen;
-}
-
-#app {
-  height: 100vh;
 }
 
 /* Structure containers */
@@ -190,4 +190,30 @@ header {
 
 .moda-l > div:hover {
   background-color: #e8e8e8;
+}
+
+/* mobile media queries */
+
+@media screen and (max-width: 575px) {
+  .container-sidebar {
+    width: 43%;
+  }
+
+  .container-chat {
+    width: 57%;
+  }
+
+  .internal-search input {
+    max-width: 100px;
+  }
+
+  .notification-bar > div,
+  .user-info > div,
+  .contact-info div:first-child {
+    display: none;
+  }
+
+  .notification-bar {
+    justify-content: center;
+  }
 }

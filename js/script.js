@@ -172,9 +172,9 @@ new Vue({
     // funzione per l'assegnazione di un indice al click su un utente
     indexAssignment: function (x) {
       this.currentIndex = x;
-      this.modalValue= false;
+      this.modalValue = false;
     },
-    // funzione per aggiungere un nuovo messaggio custom
+    // funzione per aggiungere un nuovo messaggio tramite input
     newMessage: function (index) {
       this.contacts[index].messages.push({
         text: this.temporaryMessage,
@@ -185,7 +185,7 @@ new Vue({
       this.timeoutAnswer(index);
       this.scrollFunction();
     },
-    // funzione per la risposta
+    // funzione per la risposta automatica
     timeoutAnswer: function (i) {
       setTimeout(() => {
         const randomNumber = this.randomAnswer(this.answersRandom);
@@ -196,27 +196,31 @@ new Vue({
         });
       }, 1000);
     },
-    // funzione per rimanere sempre ancorato in basso
+    // funzione per rimanere sempre ancorato in basso nella chat
     scrollFunction: function () {
       setTimeout(() => {
         let containerToScroll = this.$el.querySelector(".chat-space");
         containerToScroll.scrollTo(0, containerToScroll.scrollHeight);
       }, 1000);
     },
+    // funzione per filtrare nella barra di ricerca i contatti
     filterList: function (element) {
       return (
         element.name.toLowerCase().startsWith(this.searchInput) ||
         this.searchInput === ""
       );
     },
+    // funzione per generare un numero random 
     randomAnswer: function (array) {
       const randomN = Math.floor(Math.random() * array.length);
       return randomN;
     },
+    // funzione per prendere la data attuale
     getDate: function () {
       return dayjs().format("DD/MM/YYYY HH:mm:ss");
     },
-    lastMessage: function (i) {
+    // funzione per calcolare l'ultimo accesso
+    lastMessageDate: function (i) {
       if (this.contacts[i].messages.length > 0) {
         return this.contacts[i].messages[this.contacts[i].messages.length - 1]
           .date;
@@ -224,20 +228,24 @@ new Vue({
         return "";
       }
     },
+    // funzione per l'assegnazione di un indice al messaggio
     messageIndexAssignment: function (y) {
       this.modalValue = y;
     },
+    /* funzione per l'apparizione della modale sul
+     messaggio designato*/ 
     modalAppear: function (z) {
       this.messageIndex = z;
       this.modalToggle();
     },
-    removeItem: function (index, k) {
+    // funzione per rimuovere un messaggio
+    removeMessage: function (index, k) {
       this.contacts[index].messages.splice(k, 1);
       this.modalToggle();
     },
+    // funzione per cambiare il valore booleano di modalValue
     modalToggle: function () {
       this.modalValue = !this.modalValue;
-      console.log(this.modalValue);
     },
   },
 });
