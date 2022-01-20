@@ -14,10 +14,6 @@ i {
   color: #a9a9a9;
 }
 
-i:hover {
-  color: lightseagreen;
-}
-
 input {
   line-height: 1.5;
   border: none;
@@ -38,6 +34,7 @@ i,
 .moda-l > div {
   cursor: pointer;
 }
+
 /* ----------- */
 
 #app {
@@ -76,6 +73,10 @@ header {
   background-color: #e8e8e8;
   height: 60px;
   justify-content: space-between;
+}
+
+.panel-bar i:hover {
+  color: lightseagreen;
 }
 
 .notification-bar {
@@ -210,8 +211,12 @@ header {
     width: 70%;
   }
 
-  .user-chat {
+  .user-chat,
+  .chevron {
     display: block;
+  }
+
+  .user-chat {
     text-align: center;
   }
 
@@ -230,9 +235,5 @@ header {
   .panel-bar,
   .notification-bar {
     justify-content: center;
-  }
-
-  .chevron {
-    display: block;
   }
 }
