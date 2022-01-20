@@ -175,7 +175,7 @@ new Vue({
     newMessage: function (index) {
       this.contacts[index].messages.push({
         text: this.temporaryMessage,
-        date: "test",
+        date: this.getDate(),
         status: "sent",
       });
       this.temporaryMessage = "";
@@ -188,7 +188,7 @@ new Vue({
         const randomNumber = this.randomAnswer(this.answersRandom);
         this.contacts[i].messages.push({
           text: this.answersRandom[randomNumber],
-          date: "test",
+          date: this.getDate(),
           status: "received",
         });
       }, 1000);
@@ -209,6 +209,9 @@ new Vue({
     randomAnswer: function (array) {
       const randomN = Math.floor(Math.random() * array.length);
       return randomN;
+    },
+    getDate: function () {
+      return dayjs().format("DD/MM/YYYY HH:mm:ss");
     },
   },
 });
