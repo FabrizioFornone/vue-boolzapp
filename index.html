@@ -130,10 +130,8 @@
                 class="clear-fix"
               >
                 <div class="p-2 my-2 message-template" :class="message.status">
-                  <div class="d-flex justify-content-between">
-                    <div>{{message.text}}</div>
+                    <div class="text-message">{{message.text}}</div>
                     <i @click="modalAppear(i)" class="fas fa-chevron-down chevron"></i>
-                  </div>
                   <div class="d-flex text-secondary justify-content-end">
                     {{message.date}}
                   </div>
