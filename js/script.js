@@ -159,7 +159,7 @@ new Vue({
     temporaryMessage: "",
     searchInput: "",
     modalValue: false,
-    messageIndex: 0,
+    messageIndex: null,
     answersRandom: [
       "We uagliò",
       "Deux fritures",
