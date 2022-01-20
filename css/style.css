@@ -12,7 +12,6 @@ body {
 i {
   font-size: 20px;
   color: #a9a9a9;
-  cursor: pointer;
 }
 
 i:hover {
@@ -31,6 +30,13 @@ input {
 
 .bold-text {
   font-weight: 500;
+}
+
+i,
+.user-avatar,
+.user-chat,
+.moda-l > div {
+  cursor: pointer;
 }
 /* ----------- */
 
@@ -72,10 +78,6 @@ header {
   justify-content: space-between;
 }
 
-.user-avatar {
-  cursor: pointer;
-}
-
 .notification-bar {
   background-color: #00bfff;
   height: 70px;
@@ -108,7 +110,6 @@ header {
 }
 
 .user-chat {
-  cursor: pointer;
   display: flex;
 }
 
@@ -192,10 +193,6 @@ header {
   background: snow;
   z-index: 1000;
   border-radius: 10px;
-}
-
-.moda-l > div {
-  cursor: pointer;
 }
 
 .moda-l > div:hover {
