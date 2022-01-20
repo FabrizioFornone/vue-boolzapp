@@ -213,5 +213,8 @@ new Vue({
     getDate: function () {
       return dayjs().format("DD/MM/YYYY HH:mm:ss");
     },
+    lastMessage: function (i) {
+      return this.contacts[i].messages.length -1 ;
+    },
   },
 });
