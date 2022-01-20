@@ -159,6 +159,7 @@ new Vue({
     temporaryMessage: "",
     searchInput: "",
     modalValue: false,
+    messageIndex: 0,
     answersRandom: [
       "We uagliò",
       "Deux fritures",
@@ -217,8 +218,12 @@ new Vue({
     lastMessage: function (i) {
       return this.contacts[i].messages.length - 1;
     },
-    modalAppear: function () {
-      return this.modalValue = !this.modalValue;
+    messageIndexAssignment: function (y) {
+      this.modalValue = y;
+    },
+    modalAppear: function (z) {
+      this.messageIndex = z;
+      this.modalValue = !this.modalValue;
     },
   },
 });
