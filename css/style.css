@@ -126,20 +126,20 @@ header {
   overflow: auto;
 }
 
-.user-message,
-.interlocutor-message {
+.sent,
+.received {
   border-radius: 10px;
   min-width: 100px;
   max-width: 600px;
   word-break: normal;
 }
 
-.user-message {
+.sent {
   background-color: #dcf8c6;
   float: right;
 }
 
-.interlocutor-message {
+.received {
   background-color: snow;
   float: left;
 }

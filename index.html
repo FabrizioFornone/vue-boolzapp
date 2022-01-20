@@ -127,7 +127,7 @@
               >
                 <div
                   class="p-2 my-2 wrap-messages"
-                  :class="message.status === 'sent' ? 'user-message' : 'interlocutor-message'"
+                  :class="message.status"
                 >
                   <div>{{message.text}}</div>
                   <div class="d-flex text-secondary justify-content-end">
