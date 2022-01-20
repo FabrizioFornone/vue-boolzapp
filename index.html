@@ -109,7 +109,10 @@
                 />
                 <div class="px-3">
                   <div class="bold-text">{{contacts[currentIndex].name}}</div>
-                  <div class="text-secondary">Ultimo accesso: {{contacts[currentIndex].messages[lastMessage(currentIndex)].date}} </div>
+                  <div class="text-secondary">
+                    Ultimo accesso:
+                    {{contacts[currentIndex].messages[lastMessage(currentIndex)].date}}
+                  </div>
                 </div>
               </div>
               <div class="d-flex">
@@ -126,13 +129,17 @@
                 v-for="message in contacts[currentIndex].messages"
                 class="clear-fix"
               >
-                <div
-                  class="p-2 my-2 wrap-messages"
-                  :class="message.status"
-                >
-                  <div>{{message.text}}</div>
+                <div class="p-2 my-2 message-template" :class="message.status">
+                  <div class="d-flex">
+                    <div>{{message.text}}</div>
+                    <i class="fas fa-chevron-down chevron"></i>
+                  </div>
                   <div class="d-flex text-secondary justify-content-end">
                     {{message.date}}
+                  </div>
+                  <div class="moda-l">
+                    <div class="p-2">Message info</div>
+                    <div class="p-2">Delete Message</div>
                   </div>
                 </div>
               </div>
