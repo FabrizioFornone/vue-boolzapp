@@ -158,14 +158,6 @@ header {
   clear: both;
 }
 
-.chat-box-below i {
-  color: #808080;
-}
-
-.chat-box-below i:hover {
-  color: lightseagreen;
-}
-
 .chevron {
   margin-left: 30px;
   color: #a9a9a9;
@@ -198,6 +190,14 @@ header {
 
 .moda-l > div:hover {
   background-color: #e8e8e8;
+}
+
+.chat-box-below i {
+  color: #808080;
+}
+
+.chat-box-below i:hover {
+  color: lightseagreen;
 }
 
 /* mobile media queries */
