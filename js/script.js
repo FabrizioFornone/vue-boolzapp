@@ -158,6 +158,7 @@ new Vue({
     currentIndex: 0,
     temporaryMessage: "",
     searchInput: "",
+    modalValue: false,
     answersRandom: [
       "We uagliò",
       "Deux fritures",
@@ -214,7 +215,10 @@ new Vue({
       return dayjs().format("DD/MM/YYYY HH:mm:ss");
     },
     lastMessage: function (i) {
-      return this.contacts[i].messages.length -1 ;
+      return this.contacts[i].messages.length - 1;
+    },
+    modalAppear: function () {
+      return this.modalValue = !this.modalValue;
     },
   },
 });

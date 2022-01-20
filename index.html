@@ -126,18 +126,18 @@
             <div class="chat-space p-5">
               <!-- Messages -->
               <div
-                v-for="message in contacts[currentIndex].messages"
+                v-for="(message, i) in contacts[currentIndex].messages"
                 class="clear-fix"
               >
                 <div class="p-2 my-2 message-template" :class="message.status">
                   <div class="d-flex">
-                    <div>{{message.text}}</div>
-                    <i class="fas fa-chevron-down chevron"></i>
+                    <div>{{i}}{{message.text}}</div>
+                    <i @click="modalAppear" class="fas fa-chevron-down chevron"></i>
                   </div>
                   <div class="d-flex text-secondary justify-content-end">
                     {{message.date}}
                   </div>
-                  <div class="moda-l">
+                  <div class="moda-l" v-if="modalValue">
                     <div class="p-2">Message info</div>
                     <div class="p-2">Delete Message</div>
                   </div>
