@@ -172,6 +172,7 @@ new Vue({
     // funzione per l'assegnazione di un indice al click su un utente
     indexAssignment: function (x) {
       this.currentIndex = x;
+      this.modalValue = !this.modalValue;
     },
     // funzione per aggiungere un nuovo messaggio custom
     newMessage: function (index) {
@@ -216,7 +217,12 @@ new Vue({
       return dayjs().format("DD/MM/YYYY HH:mm:ss");
     },
     lastMessage: function (i) {
-      return this.contacts[i].messages.length - 1;
+      if (this.contacts[i].messages.length > 0) {
+        return this.contacts[i].messages[this.contacts[i].messages.length - 1]
+          .date;
+      } else {
+        return "";
+      }
     },
     messageIndexAssignment: function (y) {
       this.modalValue = y;
