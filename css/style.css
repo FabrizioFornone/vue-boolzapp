@@ -217,6 +217,7 @@ header {
   .notification-bar > div,
   .user-info > div,
   .user-icons > i,
+  .panel-bar  i,
   .contact-info div:first-child {
     display: none;
   }
