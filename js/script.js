@@ -239,8 +239,8 @@ new Vue({
       this.modalToggle();
     },
     // funzione per rimuovere un messaggio
-    removeMessage: function (index, k) {
-      this.contacts[index].messages.splice(k, 1);
+    removeMessage: function (k) {
+      this.contacts[this.currentIndex].messages.splice(k, 1);
       this.modalToggle();
     },
     // funzione per cambiare il valore booleano di modalValue

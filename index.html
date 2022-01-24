@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="https://meteoclari.it/wp-content/uploads/2020/11/WhatsApp-icon-PNG.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://meteoclari.it/wp-content/uploads/2020/11/WhatsApp-icon-PNG.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
@@ -34,9 +38,7 @@
         <!-- sidebar -->
         <div class="container-sidebar">
           <!-- user panel side -->
-          <div
-            class="d-flex align-items-center py-2 panel-bar"
-          >
+          <div class="d-flex align-items-center py-2 panel-bar">
             <div class="d-flex align-items-center user-info">
               <img
                 src="./img/avatar_io.jpg"
@@ -111,8 +113,7 @@
                 <div class="px-3 contact-info">
                   <div class="bold-text">{{contacts[currentIndex].name}}</div>
                   <div class="text-secondary">
-                    Ultimo accesso:
-                    {{lastMessageDate(currentIndex)}}
+                    Ultimo accesso: {{lastMessageDate(currentIndex)}}
                   </div>
                 </div>
               </div>
@@ -131,14 +132,22 @@
                 class="clear-fix"
               >
                 <div class="p-2 my-2 message-template" :class="message.status">
-                    <div class="text-message">{{message.text}}</div>
-                    <i @click="modalAppear(i)" class="fas fa-chevron-down chevron"></i>
+                  <div class="text-message">{{message.text}}</div>
+                  <i
+                    @click="modalAppear(i)"
+                    class="fas fa-chevron-down chevron"
+                  ></i>
                   <div class="d-flex text-secondary justify-content-end">
                     {{message.date}}
                   </div>
-                  <div class="moda-l" v-if="i === messageIndex && modalValue === true">
+                  <div
+                    class="moda-l"
+                    v-if="i === messageIndex && modalValue === true"
+                  >
                     <div class="p-2">Message info</div>
-                    <div @click="removeMessage(currentIndex, i)" class="p-2">Delete Message</div>
+                    <div @click="removeMessage(i)" class="p-2">
+                      Delete Message
+                    </div>
                   </div>
                 </div>
               </div>
