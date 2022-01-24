@@ -175,14 +175,14 @@ new Vue({
       this.modalValue = false;
     },
     // funzione per aggiungere un nuovo messaggio tramite input
-    newMessage: function (index) {
-      this.contacts[index].messages.push({
+    newMessage: function () {
+      this.contacts[this.currentIndex].messages.push({
         text: this.temporaryMessage,
         date: this.getDate(),
         status: "sent",
       });
       this.temporaryMessage = "";
-      this.timeoutAnswer(index);
+      this.timeoutAnswer(this.currentIndex);
       this.scrollFunction();
     },
     // funzione per la risposta automatica
